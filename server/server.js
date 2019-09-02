@@ -13,7 +13,7 @@ app.use(express.static('build'));
 
 /** ---------- ROUTES ---------- **/
 app.use('/movies', moviesRouter)
-app.use('/movie', movieFinder)
+app.use('/film', movieFinder)
 /** ---------- START SERVER ---------- **/
 app.listen(port, function () {
     console.log('Listening on port: ', port);

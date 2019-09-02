@@ -34,7 +34,7 @@ function* fetchMovies() {
 function* fetchMovie(action) {
     try {
         let id = action.payload
-        let response = yield axios.get('/movie/'+id)
+        let response = yield axios.get('/film/' + id)
         yield console.log(response);
         yield put({type: 'SET_GENRES', payload: response.data})
     } catch (error) {

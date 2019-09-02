@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/:id', (req, res) => {
     let movieId = req.params.id;
-    console.log(movieId);
+    console.log('/film/' + movieId);
 
     let queryText =
         `SELECT * FROM "movies"
@@ -15,6 +15,7 @@ JOIN "genres" ON "movies_genres".genre_id = "genres".id
 WHERE "movies".id = $1;`;
     pool.query(queryText, [movieId])
         .then(results => {
+            console.log(results.rows);
             res.send(results.rows)
         })
         .catch(error => {

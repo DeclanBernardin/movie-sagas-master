@@ -12,7 +12,7 @@ class Movie extends Component {
     toDetails = (id) => {
         this.props.history.push('/details')
         console.log(id);
-        this.props.dispatch({type: 'FETCH_MOVIE', payload: id })
+        this.props.dispatch({type: 'FETCH_MOVIE', payload:  id  })
     }
     
     
