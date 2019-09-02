@@ -16,6 +16,7 @@ import createSagaMiddleware from 'redux-saga';
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchMovies)
     yield takeEvery('FETCH_MOVIE', fetchMovie)
+    yield takeEvery('PUT_UPDATES', putUpdate)
 }
 
 // GET the movies from the database
@@ -39,6 +40,17 @@ function* fetchMovie(action) {
     } catch (error) {
         console.log(error);
         
+    }
+}
+
+function* putUpdate(action) {
+    try {
+        yield axios.put('/movies', action.payload)
+        yield put({
+            type: 'FETCH_MOVIE'
+        })
+    } catch (error) {
+        console.log(error);
     }
 }
 

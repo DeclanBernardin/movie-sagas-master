@@ -19,7 +19,7 @@ class Movie extends Component {
     render() {
         // loops through the movies from the database to display them
         let film = this.props.reduxStore.movies.map((movie, index) => {
-            return (<div onClick={() => this.toDetails(movie.id)}>
+            return (<div key={index} onClick={() => this.toDetails(movie.id)}>
                 <h1>{movie.title}</h1>
                 <img src={movie.poster} />
                 <p>{movie.description}</p></div>)
