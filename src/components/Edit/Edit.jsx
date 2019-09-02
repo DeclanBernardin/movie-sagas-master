@@ -26,6 +26,7 @@ class Edit extends Component {
         })
     }
 
+    // sends changes to redux
     editChanges = (id) => {
         this.props.dispatch({type:'PUT_UPDATES', payload: {title: this.state.title, description: this.state.description, id: id}})
         console.log(this.state);

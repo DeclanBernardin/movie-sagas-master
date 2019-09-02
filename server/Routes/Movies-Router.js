@@ -4,6 +4,7 @@ const axios = require('axios');
 
 const router = express.Router();
 
+// grabs a;l;l movies
 router.get('/', (req, res) => {
     pool.query('SELECT * FROM "movies";').then((result) => {
         res.send(result.rows);
@@ -14,6 +15,7 @@ router.get('/', (req, res) => {
 
 });
 
+// updates movies
 router.put('/', (req, res) => {
     let updateMovie = req.body;
     console.log(updateMovie);

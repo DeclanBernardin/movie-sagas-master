@@ -43,6 +43,7 @@ function* fetchMovie(action) {
     }
 }
 
+// pushes updates to movies 
 function* putUpdate(action) {
     try {
         yield axios.put('/movies', action.payload)
