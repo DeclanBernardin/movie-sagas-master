@@ -25,7 +25,7 @@ class Details extends Component {
                 moviePoster = <img src = {movie.poster}/>;
                 movieDescription = <p>{movie.description}</p>;
             }
-            return (<ul><li>{movie.name}</li></ul>)
+            return (<ul key = {index}><li>{movie.name}</li></ul>)
         })
         return (
             <div>

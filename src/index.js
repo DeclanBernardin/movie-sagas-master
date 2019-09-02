@@ -47,7 +47,7 @@ function* putUpdate(action) {
     try {
         yield axios.put('/movies', action.payload)
         yield put({
-            type: 'FETCH_MOVIE'
+            type: 'FETCH_MOVIES'
         })
     } catch (error) {
         console.log(error);
