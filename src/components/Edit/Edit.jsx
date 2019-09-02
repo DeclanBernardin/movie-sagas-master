@@ -36,7 +36,7 @@ class Edit extends Component {
 
     render() {
         let filmInfo = this.props.reduxStore.genres.map((movie, index) => {
-            return (<button key = {index} onClick={() => this.editChanges(movie.movie_id)}>Edit</button>)
+            return (<button key = {index} onClick={() => this.editChanges(movie.movie_id)}>Save</button>)
         })
         return (
             <div>
