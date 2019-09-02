@@ -3,16 +3,19 @@ import { connect } from 'react-redux';
 
 class Details extends Component {
 
+
+    // sends you to the home page
     returnToMovie = () => {
         this.props.history.push('/')
     }
 
+    //sends you to edit page 
     editMovie = () => {
         this.props.history.push('/edit')
     }
 
     render() {
-        
+        //grabs the info to display to the dom 
         let movieTitle;
         let moviePoster;
         let movieDescription;
