@@ -7,13 +7,20 @@ class Movie extends Component {
         this.props.dispatch({type: 'FETCH_MOVIES'})
     }
 
-    toDetails = () => {
-        this.props.history.push('/Details')
+    toDetails = (id) => {
+        this.props.history.push('/details')
+        console.log(id);
+        this.props.dispatch({type: 'FETCH_MOVIE', payload: id })
     }
     
+    
     render() {
-        let film = this.props.reduxStore.movies.map((movie) => {
-            return (<div onClick = {this.toDetails}><h1>{movie.title}</h1><img src = {movie.poster}/><p>{movie.description}</p></div>)
+        // loops through the movies from the database to display them
+        let film = this.props.reduxStore.movies.map((movie, index) => {
+            return (<div onClick={() => this.toDetails(movie.id)}>
+                <h1>{movie.title}</h1>
+                <img src={movie.poster} />
+                <p>{movie.description}</p></div>)
         })
         return (
         <div>
