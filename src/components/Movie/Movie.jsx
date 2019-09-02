@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 
 class Movie extends Component {
 
+    // gets all the movies on page load
     componentDidMount(){
         this.props.dispatch({type: 'FETCH_MOVIES'})
     }
 
+    // sends the id to the index and sends you to the details page
     toDetails = (id) => {
         this.props.history.push('/details')
         console.log(id);

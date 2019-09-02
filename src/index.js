@@ -29,6 +29,7 @@ function* fetchMovies() {
     }
 }
 
+// fetches the specific movie details 
 function* fetchMovie(action) {
     try {
         let id = action.payload
