@@ -23,7 +23,7 @@ CREATE TABLE "movies_genres" (
 "genre_id" INT REFERENCES "genres");
 
 INSERT INTO "movies_genres" ("movie_id" , "genre_id")
-VALUES (2, 10), (1, 11), (3, 1), (4, 2), (4, 4);
+VALUES (2, 10), (1, 11), (3, 1), (4, 2), (4, 4), (5, 5), (6, 8), (7, 9), (8, 10), (9, 8), (10,10), (12, 1), (13,12), (14, 9), (7,13) ;
 
 
 
