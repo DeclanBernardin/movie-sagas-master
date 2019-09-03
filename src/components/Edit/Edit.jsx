@@ -43,7 +43,7 @@ class Edit extends Component {
                 <button onClick = {this.return}>Cancel</button>
                 
                 <input placeholder='title' onChange={(event) => this.handleChangeTitle(event)}></input>
-                <input placeholder='description' onChange={(event) => this.handleChangeDescription(event)}></input>
+                <textarea placeholder='description' onChange={(event) => this.handleChangeDescription(event)}></textarea>
                 {filmInfo}
             </div>
         );
